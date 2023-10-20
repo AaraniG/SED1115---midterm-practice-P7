@@ -29,9 +29,18 @@ while True:
         print("Input is empty. Please enter a valid string.")
         continue
 
-    # Check if the input contains only letters
-    if not phrase.isalpha():
-        print("Input contains non-alphabet characters. Please enter letters only.")
+    #Check if the input contains only alphabet letters and spaces
+    #If it doesn't contain only alphabet letters, the code considers the input as containing non-alphabet characters and displays an error message. 
+    '''
+    -> phrase.replace(' ', '') 
+        - replaces all spaces in the phrase with an empty string ('').
+        - basically removes all the spaces from the phrase
+    -> .isalpha() 
+        - returns True if all the characters in the string are alphabet letters (A-Z or a-z)
+        - returns False if the string contains any non-alphabet characters
+    '''
+    if not phrase.replace(' ', '').isalpha():
+        print("Input contains non-alphabet characters. Please enter letters and spaces only.")
         continue
 
     # Call the function to count vowels and consonants in the input phrase
