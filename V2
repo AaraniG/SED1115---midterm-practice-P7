@@ -1,0 +1,38 @@
+def count_vowels_and_consonants(phrase):
+    vowels = "aeiouAEIOU"
+    consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+    
+    vowel_count = 0
+    consonant_count = 0
+
+    for x in phrase:
+        if x in vowels:
+            vowel_count += 1
+        elif x in consonants:
+            consonant_count += 1
+
+    return vowel_count, consonant_count
+
+while True:
+    phrase = input("Enter a string: ")
+    
+    # Check if the input is not empty
+    if not phrase:
+        print("Input is empty. Please enter a valid string.")
+        continue
+
+    # Check if the input contains only letters
+    if not phrase.isalpha():
+        print("Input contains non-alphabet characters. Please enter letters only.")
+        continue
+
+    # Call the function to count vowels and consonants in the input phrase
+    vowel_count, consonant_count = count_vowels_and_consonants(phrase)
+
+    # Display the results to the user
+    print("Number of vowels in the phrase:", vowel_count) 
+    print("Number of consonants in the phrase:", consonant_count) 
+    another = input("Do you want to enter another string? (yes/no): ")
+    
+    if another.lower() != "yes":
+        break
