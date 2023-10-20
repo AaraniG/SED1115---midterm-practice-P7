@@ -17,8 +17,8 @@ all/some error cases
 
 def count_vowels_and_consonants(phrase):
     #string of all the vowels (upper and lower case bc case sensitive)
-    #can also approach by putting letters into a list but I'm too lazy to type everything out and put into individual strings
-    #vowes = (["a","e",...])
+    #can also approach by putting letters into a list but I'm too lazy to type everything out and write individual strings
+    #vowels = (["a","e",...])
     vowels = "aeiouAEIOU" 
     consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ" #string of all other letters in the alphabet (upper and lower case again)
     
