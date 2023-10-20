@@ -20,6 +20,7 @@ def count_vowels_and_consonants(phrase):
 
     return vowel_count, consonant_count #returns count of vowels and consonants
 
+# Create an infinite loop to keep asking for input
 while True:
     phrase = input("Enter a string: ") #User input -> asking to enter a string
     
@@ -39,7 +40,8 @@ while True:
     #Displays the number of vowels and consonants in the string
     print("Number of vowels in the phrase:", vowel_count) 
     print("Number of consonants in the phrase:", consonant_count) 
-    another = input("Do you want to enter another string? (yes/no): ")
     
-    if another.lower() != "yes":
+    another = input("Do you want to enter another string? (yes/no): ") #Asks user if they want to try again
+    
+    if another.lower() != "yes": # is user response is not "yes" then exit the loop
         break
